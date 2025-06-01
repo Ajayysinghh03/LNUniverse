@@ -11,14 +11,15 @@
     <div class="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div class="max-w-md w-full space-y-8">
             <div>
-                <a href="/" class="flex justify-center">
+                <a href="{% url 'home' %}" class="flex justify-center">
                     <span class="text-3xl font-bold text-blue-600">LNUniverse</span>
                 </a>
                 <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
                     Create your account
                 </h2>
             </div>
-            <form class="mt-8 space-y-6" action="#" method="POST">
+            <form class="mt-8 space-y-6" action="{% url 'users:register' %}" method="POST">
+                {% csrf_token %}
                 <div class="rounded-md shadow-sm -space-y-px">
                     <div>
                         <label for="role" class="sr-only">Select Role</label>
@@ -94,7 +95,7 @@
             <div class="text-center">
                 <p class="text-sm text-gray-600">
                     Already have an account?
-                    <a href="/login" class="font-medium text-blue-600 hover:text-blue-500">
+                    <a href="{% url 'users:login' %}" class="font-medium text-blue-600 hover:text-blue-500">
                         Sign in here
                     </a>
                 </p>
