@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Admin Dashboard - LNUniverse</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+    <div class="min-h-screen flex">
+        <!-- Sidebar -->
+        <div class="bg-blue-800 text-white w-64 space-y-6 py-7 px-2 absolute inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out">
+            <a href="index.html" class="text-white flex items-center space-x-2 px-4">
+                <span class="text-2xl font-extrabold">LNUniverse</span>
+            </a>
+
+            <nav>
+                <a href="#" class="block py-2.5 px-4 rounded transition duration-200 bg-blue-700">
+                    <i class="fas fa-home mr-2"></i>Dashboard
+                </a>
+                <a href="#" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white">
+                    <i class="fas fa-users mr-2"></i>Students
+                </a>
+                <a href="#" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white">
+                    <i class="fas fa-chalkboard-teacher mr-2"></i>Teachers
+                </a>
+                <a href="#" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white">
+                    <i class="fas fa-book mr-2"></i>Courses
+                </a>
+                <a href="#" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white">
+                    <i class="fas fa-calendar-alt mr-2"></i>Schedule
+                </a>
+                <a href="#" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white">
+                    <i class="fas fa-chart-bar mr-2"></i>Reports
+                </a>
+                <a href="#" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white">
+                    <i class="fas fa-cog mr-2"></i>Settings
+                </a>
+                <a href="login.html" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white">
+                    <i class="fas fa-sign-out-alt mr-2"></i>Logout
+                </a>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1">
+            <!-- Top Navigation -->
+            <header class="bg-white shadow-lg">
+                <div class="flex items-center justify-between px-6 py-4">
+                    <div class="flex items-center">
+                        <button class="text-gray-500 focus:outline-none md:hidden">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <div class="relative mx-4 lg:mx-0">
+                            <span class="absolute inset-y-0 left-0 pl-3 flex items-center">
+                                <i class="fas fa-search text-gray-500"></i>
+                            </span>
+                            <input class="form-input w-32 sm:w-64 rounded-md pl-10 pr-4 py-2 border border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50" type="text" placeholder="Search">
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <button class="flex mx-4 text-gray-600 focus:outline-none">
+                            <i class="fas fa-bell"></i>
+                        </button>
+                        <div class="relative">
+                            <button class="relative z-10 block h-8 w-8 rounded-full overflow-hidden focus:outline-none">
+                                <img class="h-full w-full object-cover" src="https://images.unsplash.com/photo-1528892952291-009c66379c28?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=296&q=80" alt="Your avatar">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Page Content -->
+            <main class="p-6">
+                <!-- Stats Overview -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <div class="flex items-center">
+                            <div class="p-3 rounded-full bg-blue-500 bg-opacity-10">
+                                <i class="fas fa-users text-blue-500 text-2xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h2 class="text-gray-600 text-sm">Total Students</h2>
+                                <p class="text-2xl font-semibold text-gray-700">3,500</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <div class="flex items-center">
+                            <div class="p-3 rounded-full bg-green-500 bg-opacity-10">
+                                <i class="fas fa-chalkboard-teacher text-green-500 text-2xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h2 class="text-gray-600 text-sm">Total Teachers</h2>
+                                <p class="text-2xl font-semibold text-gray-700">250</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <div class="flex items-center">
+                            <div class="p-3 rounded-full bg-purple-500 bg-opacity-10">
+                                <i class="fas fa-book text-purple-500 text-2xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h2 class="text-gray-600 text-sm">Active Courses</h2>
+                                <p class="text-2xl font-semibold text-gray-700">45</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <div class="flex items-center">
+                            <div class="p-3 rounded-full bg-yellow-500 bg-opacity-10">
+                                <i class="fas fa-building text-yellow-500 text-2xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h2 class="text-gray-600 text-sm">Departments</h2>
+                                <p class="text-2xl font-semibold text-gray-700">8</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Department Management -->
+                <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-lg font-semibold text-gray-700">Department Management</h2>
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700" onclick="showAddDepartmentModal()">
+                            <i class="fas fa-plus mr-2"></i>Add Department
+                        </button>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Department Name</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">HOD</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Teachers</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Students</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">Computer Science</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Dr. John Doe</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">45</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">850</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Active</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <a href="#" class="text-blue-600 hover:text-blue-900 mr-3" onclick="editDepartment('CS')">Edit</a>
+                                        <a href="#" class="text-red-600 hover:text-red-900" onclick="deleteDepartment('CS')">Delete</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">Electronics</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Dr. Jane Smith</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">35</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">650</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Active</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <a href="#" class="text-blue-600 hover:text-blue-900 mr-3" onclick="editDepartment('ECE')">Edit</a>
+                                        <a href="#" class="text-red-600 hover:text-red-900" onclick="deleteDepartment('ECE')">Delete</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Faculty Management Section -->
+                <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-lg font-semibold text-gray-700">Faculty Management</h2>
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700" onclick="showAddTeacherModal()">
+                            <i class="fas fa-plus mr-2"></i>Add New Teacher
+                        </button>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Department</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Email</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">Dr. John Smith</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Computer Science</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">john.smith@lnct.edu</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Active</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <a href="#" class="text-blue-600 hover:text-blue-900 mr-3" onclick="editTeacher('T1')">Edit</a>
+                                        <a href="#" class="text-red-600 hover:text-red-900" onclick="deleteTeacher('T1')">Delete</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Student Management Section -->
+                <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-lg font-semibold text-gray-700">Student Management</h2>
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700" onclick="showAddStudentModal()">
+                            <i class="fas fa-plus mr-2"></i>Add New Student
+                        </button>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Enrollment No.</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Course</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">Alice Johnson</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">CS2023001</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">B.Tech CSE</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Active</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <a href="#" class="text-blue-600 hover:text-blue-900 mr-3" onclick="editStudent('S1')">Edit</a>
+                                        <a href="#" class="text-red-600 hover:text-red-900" onclick="deleteStudent('S1')">Delete</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h2 class="text-lg font-semibold text-gray-700 mb-4">Recent Activity</h2>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
+                            <div class="ml-4">
+                                <p class="text-sm text-gray-600">New student registration completed</p>
+                                <p class="text-xs text-gray-400">2 minutes ago</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+                            <div class="ml-4">
+                                <p class="text-sm text-gray-600">Course schedule updated for CSE Department</p>
+                                <p class="text-xs text-gray-400">1 hour ago</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-2 h-2 bg-purple-500 rounded-full"></div>
+                            <div class="ml-4">
+                                <p class="text-sm text-gray-600">New teacher assigned to ECE Department</p>
+                                <p class="text-xs text-gray-400">3 hours ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Add Department Modal -->
+    <div id="addDepartmentModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 hidden overflow-y-auto h-full w-full">
+        <div class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
+            <div class="mt-3">
+                <h3 class="text-lg font-medium leading-6 text-gray-900 mb-4">Add New Department</h3>
+                <form id="addDepartmentForm">
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="deptName">
+                            Department Name
+                        </label>
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="deptName" type="text" placeholder="Department Name">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="hodName">
+                            Head of Department
+                        </label>
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="hodName" type="text" placeholder="HOD Name">
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                            Add Department
+                        </button>
+                        <button class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" onclick="hideAddDepartmentModal()">
+                            Cancel
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Teacher Modal -->
+    <div id="addTeacherModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 hidden overflow-y-auto h-full w-full">
+        <div class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
+            <div class="mt-3">
+                <h3 class="text-lg font-medium leading-6 text-gray-900 mb-4">Add New Teacher</h3>
+                <form id="addTeacherForm">
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="teacherName">
+                            Full Name
+                        </label>
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="teacherName" type="text" placeholder="Full Name">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="teacherEmail">
+                            Email
+                        </label>
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="teacherEmail" type="email" placeholder="Email">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="teacherDepartment">
+                            Department
+                        </label>
+                        <select class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="teacherDepartment">
+                            <option value="">Select Department</option>
+                            <option value="cse">Computer Science</option>
+                            <option value="ece">Electronics</option>
+                            <option value="me">Mechanical</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="teacherPassword">
+                            Password
+                        </label>
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="teacherPassword" type="password" placeholder="Password">
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                            Add Teacher
+                        </button>
+                        <button class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" onclick="hideAddTeacherModal()">
+                            Cancel
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Student Modal -->
+    <div id="addStudentModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 hidden overflow-y-auto h-full w-full">
+        <div class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
+            <div class="mt-3">
+                <h3 class="text-lg font-medium leading-6 text-gray-900 mb-4">Add New Student</h3>
+                <form id="addStudentForm">
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="studentName">
+                            Full Name
+                        </label>
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="studentName" type="text" placeholder="Full Name">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="studentEmail">
+                            Email
+                        </label>
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="studentEmail" type="email" placeholder="Email">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="enrollmentNumber">
+                            Enrollment Number
+                        </label>
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="enrollmentNumber" type="text" placeholder="Enrollment Number">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="studentCourse">
+                            Course
+                        </label>
+                        <select class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="studentCourse">
+                            <option value="">Select Course</option>
+                            <option value="btech-cse">B.Tech CSE</option>
+                            <option value="btech-ece">B.Tech ECE</option>
+                            <option value="btech-me">B.Tech ME</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="studentPassword">
+                            Password
+                        </label>
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="studentPassword" type="password" placeholder="Password">
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                            Add Student
+                        </button>
+                        <button class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" onclick="hideAddStudentModal()">
+                            Cancel
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('button').addEventListener('click', function() {
+            document.querySelector('.bg-blue-800').classList.toggle('-translate-x-full');
+        });
+
+        // Department Management Functions
+        function showAddDepartmentModal() {
+            document.getElementById('addDepartmentModal').classList.remove('hidden');
+        }
+
+        function hideAddDepartmentModal() {
+            document.getElementById('addDepartmentModal').classList.add('hidden');
+        }
+
+        function editDepartment(deptId) {
+            // Implement edit functionality
+            console.log('Editing department:', deptId);
+        }
+
+        function deleteDepartment(deptId) {
+            if(confirm('Are you sure you want to delete this department?')) {
+                // Implement delete functionality
+                console.log('Deleting department:', deptId);
+            }
+        }
+
+        // Form submission handling
+        document.getElementById('addDepartmentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const deptName = document.getElementById('deptName').value;
+            const hodName = document.getElementById('hodName').value;
+
+            // Here you would typically send this data to your backend
+            console.log('Adding department:', { deptName, hodName });
+
+            // Hide modal after submission
+            hideAddDepartmentModal();
+
+            // Clear form
+            this.reset();
+        });
+
+        // Teacher Management Functions
+        function showAddTeacherModal() {
+            document.getElementById('addTeacherModal').classList.remove('hidden');
+        }
+
+        function hideAddTeacherModal() {
+            document.getElementById('addTeacherModal').classList.add('hidden');
+        }
+
+        function editTeacher(teacherId) {
+            // Implement edit functionality
+            console.log('Editing teacher:', teacherId);
+        }
+
+        function deleteTeacher(teacherId) {
+            if(confirm('Are you sure you want to delete this teacher?')) {
+                // Implement delete functionality
+                console.log('Deleting teacher:', teacherId);
+            }
+        }
+
+        // Student Management Functions
+        function showAddStudentModal() {
+            document.getElementById('addStudentModal').classList.remove('hidden');
+        }
+
+        function hideAddStudentModal() {
+            document.getElementById('addStudentModal').classList.add('hidden');
+        }
+
+        function editStudent(studentId) {
+            // Implement edit functionality
+            console.log('Editing student:', studentId);
+        }
+
+        function deleteStudent(studentId) {
+            if(confirm('Are you sure you want to delete this student?')) {
+                // Implement delete functionality
+                console.log('Deleting student:', studentId);
+            }
+        }
+
+        // Form submission handling
+        document.getElementById('addTeacherForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const teacherName = document.getElementById('teacherName').value;
+            const teacherEmail = document.getElementById('teacherEmail').value;
+            const teacherDepartment = document.getElementById('teacherDepartment').value;
+            const teacherPassword = document.getElementById('teacherPassword').value;
+
+            // Here you would typically send this data to your backend
+            console.log('Adding teacher:', { teacherName, teacherEmail, teacherDepartment, teacherPassword });
+
+            // Hide modal after submission
+            hideAddTeacherModal();
+
+            // Clear form
+            this.reset();
+        });
+
+        document.getElementById('addStudentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const studentName = document.getElementById('studentName').value;
+            const studentEmail = document.getElementById('studentEmail').value;
+            const enrollmentNumber = document.getElementById('enrollmentNumber').value;
+            const studentCourse = document.getElementById('studentCourse').value;
+            const studentPassword = document.getElementById('studentPassword').value;
+
+            // Here you would typically send this data to your backend
+            console.log('Adding student:', { studentName, studentEmail, enrollmentNumber, studentCourse, studentPassword });
+
+            // Hide modal after submission
+            hideAddStudentModal();
+
+            // Clear form
+            this.reset();
+        });
+    </script>
+</body>
+</html>

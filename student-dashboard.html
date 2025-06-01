@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - LNUniverse</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+    <div class="min-h-screen flex">
+        <!-- Sidebar -->
+        <div class="bg-blue-800 text-white w-64 space-y-6 py-7 px-2 absolute inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out">
+            <a href="index.html" class="text-white flex items-center space-x-2 px-4">
+                <span class="text-2xl font-extrabold">LNUniverse</span>
+            </a>
+
+            <nav>
+                <a href="#" class="block py-2.5 px-4 rounded transition duration-200 bg-blue-700">
+                    <i class="fas fa-home mr-2"></i>Dashboard
+                </a>
+                <a href="#" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white">
+                    <i class="fas fa-book mr-2"></i>My Courses
+                </a>
+                <a href="#" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white">
+                    <i class="fas fa-tasks mr-2"></i>Assignments
+                </a>
+                <a href="#" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white">
+                    <i class="fas fa-calendar-alt mr-2"></i>Schedule
+                </a>
+                <a href="#" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white">
+                    <i class="fas fa-chart-line mr-2"></i>Grades
+                </a>
+                <a href="#" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white">
+                    <i class="fas fa-bell mr-2"></i>Notifications
+                </a>
+                <a href="login.html" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white">
+                    <i class="fas fa-sign-out-alt mr-2"></i>Logout
+                </a>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1">
+            <!-- Top Navigation -->
+            <header class="bg-white shadow-lg">
+                <div class="flex items-center justify-between px-6 py-4">
+                    <div class="flex items-center">
+                        <button class="text-gray-500 focus:outline-none md:hidden">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <div class="relative mx-4 lg:mx-0">
+                            <span class="absolute inset-y-0 left-0 pl-3 flex items-center">
+                                <i class="fas fa-search text-gray-500"></i>
+                            </span>
+                            <input class="form-input w-32 sm:w-64 rounded-md pl-10 pr-4 py-2 border border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50" type="text" placeholder="Search">
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <button class="flex mx-4 text-gray-600 focus:outline-none">
+                            <i class="fas fa-bell"></i>
+                        </button>
+                        <div class="relative">
+                            <button class="relative z-10 block h-8 w-8 rounded-full overflow-hidden focus:outline-none">
+                                <img class="h-full w-full object-cover" src="https://images.unsplash.com/photo-1528892952291-009c66379c28?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=296&q=80" alt="Your avatar">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Page Content -->
+            <main class="p-6">
+                <!-- Stats Overview -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <div class="flex items-center">
+                            <div class="p-3 rounded-full bg-blue-500 bg-opacity-10">
+                                <i class="fas fa-book text-blue-500 text-2xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h2 class="text-gray-600 text-sm">Enrolled Courses</h2>
+                                <p class="text-2xl font-semibold text-gray-700">6</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <div class="flex items-center">
+                            <div class="p-3 rounded-full bg-green-500 bg-opacity-10">
+                                <i class="fas fa-tasks text-green-500 text-2xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h2 class="text-gray-600 text-sm">Pending Assignments</h2>
+                                <p class="text-2xl font-semibold text-gray-700">3</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <div class="flex items-center">
+                            <div class="p-3 rounded-full bg-purple-500 bg-opacity-10">
+                                <i class="fas fa-chart-line text-purple-500 text-2xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h2 class="text-gray-600 text-sm">Average Grade</h2>
+                                <p class="text-2xl font-semibold text-gray-700">85%</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <div class="flex items-center">
+                            <div class="p-3 rounded-full bg-yellow-500 bg-opacity-10">
+                                <i class="fas fa-calendar-check text-yellow-500 text-2xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h2 class="text-gray-600 text-sm">Classes Today</h2>
+                                <p class="text-2xl font-semibold text-gray-700">4</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Today's Schedule -->
+                <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-lg font-semibold text-gray-700">Today's Schedule</h2>
+                        <button class="text-blue-600 hover:text-blue-800" onclick="viewFullSchedule()">
+                            View Full Schedule
+                        </button>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                            <div class="flex items-center">
+                                <div class="p-3 rounded-full bg-blue-100">
+                                    <i class="fas fa-clock text-blue-500"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-sm font-medium text-gray-900">Data Structures</h3>
+                                    <p class="text-sm text-gray-500">Prof. John Doe</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-sm font-medium text-gray-900">09:00 AM - 10:30 AM</p>
+                                <p class="text-sm text-gray-500">Room 301</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                            <div class="flex items-center">
+                                <div class="p-3 rounded-full bg-green-100">
+                                    <i class="fas fa-clock text-green-500"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-sm font-medium text-gray-900">Database Systems</h3>
+                                    <p class="text-sm text-gray-500">Prof. Jane Smith</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-sm font-medium text-gray-900">11:00 AM - 12:30 PM</p>
+                                <p class="text-sm text-gray-500">Room 205</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pending Assignments -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-lg font-semibold text-gray-700">Pending Assignments</h2>
+                        <button class="text-blue-600 hover:text-blue-800" onclick="viewAllAssignments()">
+                            View All Assignments
+                        </button>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Title</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Course</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Due Date</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">Binary Tree Implementation</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Data Structures</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">2024-03-15</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">Pending</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <button class="text-blue-600 hover:text-blue-900" onclick="submitAssignment('DS1')">Submit</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">SQL Queries Practice</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">Database Systems</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">2024-03-10</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Submitted</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <button class="text-blue-600 hover:text-blue-900" onclick="viewSubmission('DB1')">View</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Submit Assignment Modal -->
+    <div id="submitAssignmentModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 hidden overflow-y-auto h-full w-full">
+        <div class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
+            <div class="mt-3">
+                <h3 class="text-lg font-medium leading-6 text-gray-900 mb-4">Submit Assignment</h3>
+                <form id="submitAssignmentForm">
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="assignmentFile">
+                            Upload File
+                        </label>
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="assignmentFile" type="file">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="comments">
+                            Comments
+                        </label>
+                        <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="comments" rows="3" placeholder="Any additional comments"></textarea>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                            Submit Assignment
+                        </button>
+                        <button class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" onclick="hideSubmitAssignmentModal()">
+                            Cancel
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('button').addEventListener('click', function() {
+            document.querySelector('.bg-blue-800').classList.toggle('-translate-x-full');
+        });
+
+        // Assignment Management Functions
+        function submitAssignment(assignmentId) {
+            document.getElementById('submitAssignmentModal').classList.remove('hidden');
+        }
+
+        function hideSubmitAssignmentModal() {
+            document.getElementById('submitAssignmentModal').classList.add('hidden');
+        }
+
+        function viewSubmission(assignmentId) {
+            // Implement view submission functionality
+            console.log('Viewing submission for assignment:', assignmentId);
+        }
+
+        function viewAllAssignments() {
+            // Implement view all assignments functionality
+            console.log('Viewing all assignments');
+        }
+
+        function viewFullSchedule() {
+            // Implement view full schedule functionality
+            console.log('Viewing full schedule');
+        }
+
+        // Form submission handling
+        document.getElementById('submitAssignmentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const file = document.getElementById('assignmentFile').files[0];
+            const comments = document.getElementById('comments').value;
+
+            // Here you would typically send this data to your backend
+            console.log('Submitting assignment:', { file, comments });
+
+            // Hide modal after submission
+            hideSubmitAssignmentModal();
+
+            // Clear form
+            this.reset();
+        });
+    </script>
+</body>
+</html>
